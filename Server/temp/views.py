@@ -6,3 +6,4 @@ from .serializers import TempSerializer
 class TempView(viewsets.ModelViewSet):
     queryset = Temp.objects.all()
     serializer_class = TempSerializer
+

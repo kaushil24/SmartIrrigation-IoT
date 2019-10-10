@@ -1,8 +1,14 @@
 import requests
 
 try:
-    url = "http://127.0.0.1:8000/temp/temp/"
 
+    print("Enter 1 to add locally\n 2 To add data to remote server")
+    x = int(input())
+    if x==1:
+        url = "http://127.0.0.1:8000/temp/temp/"
+    elif x==2:
+        url = "http://167.71.234.104:8000/temp/temp/"
+    
     headers = {
         'User-Agent': "PostmanRuntime/7.17.1",
         'Accept': "*/*",
@@ -16,7 +22,7 @@ try:
         'cache-control': "no-cache"
         }
 
-    stn = {"data": 696969.69, "anamoly":True}
+    stn = {"data":0001.222, "anamoly":False}
     response = requests.request("POST", url, data = stn, headers=headers)
 
     print(response.text)
