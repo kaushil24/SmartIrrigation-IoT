@@ -20,4 +20,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('lang/', include('languages.urls')),
     path('temp/', include('temp.urls')),
+    path('admin/graph1', include('temp.urls')),
 ]

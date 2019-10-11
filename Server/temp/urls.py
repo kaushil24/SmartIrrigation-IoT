@@ -6,5 +6,6 @@ router = routers.DefaultRouter()
 router.register('temp', views.TempView)
 
 urlpatterns = [
-    path('', include(router.urls))
+    path('', include(router.urls)),
+    path('/graph1', views.graph1),
 ]
